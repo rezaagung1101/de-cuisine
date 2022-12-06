@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_judulHalaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semi_bold_poppins"
+        android:text="Detail Resep"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/tv_judulHalaman"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:padding="21dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/cover_latihan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lontong_balap"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_namaResep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/semi_bold_poppins"
+                android:text="Lorem ipsum"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_labelPembuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular_poppins"
+                android:textStyle="bold"
+                android:text="Pembuat : "
+                android:textColor="#000000"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_namaPembuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/regular_poppins"
+                android:text="Someone "
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+
+            <TextView
+                android:id="@+id/tv_bahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/regular_poppins"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum erat elit, ut facilisis ipsum auctor eu. Aliquam vehicula scelerisque nulla. Quisque rutrum facilisis eros, nec placerat eros molestie sit amet. Vestibulum ac eros tempor, accumsan nunc quis, suscipit eros. Donec sit amet vehicula nulla, ac convallis est. Etiam eu ullamcorper massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sodales, velit ut eleifend dapibus, nisl felis varius urna, non ultricies mauris nulla nec dui. Fusce semper massa ut purus tincidunt mattis. Ut tempus venenatis sapien, quis luctus nunc convallis sit amet. Vivamus non lacus tellus. In sit amet nunc interdum, ultricies elit in, efficitur turpis. In hac habitasse platea dictumst."
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerlatihan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="304dp"
+            android:layout_height="41dp"
+            android:background="@drawable/button_normal"
+            android:fontFamily="@font/semi_bold_poppins"
+            android:shadowColor="#FFFFFF"
+            android:text="Kembali"
+            android:layout_marginVertical="25dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
