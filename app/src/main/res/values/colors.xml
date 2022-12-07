@@ -8,7 +8,7 @@
     <color name="black">#1E1E1E</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#FFDCBA</color>
-    <color name="button">#FAAB78</color>
+<!--    <color name="button">#FAAB78</color>-->
     <color name="secondary">#E8F3D6</color>
     <color name="yellow">#F1B75D</color>
     <color name="red">#850000</color>
@@ -16,6 +16,11 @@
     <color name="orange">#D46E2D</color>
     <color name="light_orange">#FFC961</color>
     <color name="dark_orange">#BC4823</color>
+    <color name="color_1">#1C3879</color>
+    <color name="color_2">#607EAA</color>
+    <color name="color_3">#EAE3D2</color>
+    <color name="color_4">#F9F5EB</color>
+    <color name="button">#FAAB78</color>
     <color name="grey">#EBEBEB</color>
 
 </resources>

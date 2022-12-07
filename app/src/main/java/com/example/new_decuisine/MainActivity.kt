@@ -10,15 +10,29 @@ import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.hide()
-        val btnNext = findViewById<TextView>(R.id.btnNext)
 
-        btnNext.setOnClickListener {
-            val intent = Intent(this,HomePage::class.java)
-            startActivity(intent)
-            finish()
+        val firstFragment = FirstFragment()
+        val secondFragment = SecondFragment()
+
+        setCurrentFragment(firstFragment)
+        var navigation_menu = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        navigation_menu.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.miHome -> setCurrentFragment(firstFragment)
+                R.id.miArticle -> setCurrentFragment(secondFragment)
+            }
+            true
         }
     }
+
+    override fun <T : View?> findViewById(id: Int): T {
+        return super.findViewById(id)
+    }
+    private fun setCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment, fragment)
+            commit() }
 }
