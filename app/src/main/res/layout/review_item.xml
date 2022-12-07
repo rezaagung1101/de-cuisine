@@ -9,7 +9,7 @@
     android:layout_marginBottom="10dp">
 
     <TextView
-        android:id="@+id/recipe_cat"
+        android:id="@+id/review_cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/cat_label"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
-        android:id="@+id/recipe_name"
+        android:id="@+id/review_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Resep"
@@ -31,51 +31,45 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_cat"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/review_cat"></TextView>
 
     <TextView
-        android:id="@+id/recipe_creator"
+        android:id="@+id/review_creator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Creator"
         android:textColor="@color/color_2"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_name"></TextView>
-
-    <ImageView
-        android:id="@+id/recipe_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ayam_betutu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.995"
-        app:layout_constraintStart_toEndOf="@+id/recipe_name"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toBottomOf="@+id/review_name"></TextView>
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/review_view"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:background="@color/color_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_image"></View>
+        app:layout_constraintTop_toBottomOf="@+id/review_review"></View>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="85dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button"
-        app:backgroundTint="@color/button"
-        android:paddingTop="-3dp"
-        android:text="Cook"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+    <RatingBar
+        android:id="@+id/review_rating"
+        android:layout_width="234dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="@+id/review_creator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"/>
+        app:layout_constraintTop_toTopOf="@+id/review_cat" />
+
+    <TextView
+        android:id="@+id/review_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="sebuah  review yang lumayan panjang lorem ipsum dolor sil amet tahu bulat digoreng di mobil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_creator" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

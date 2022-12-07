@@ -13,6 +13,29 @@
         android:theme="@style/Theme.New_decuisine"
         tools:targetApi="31">
         <activity
+            android:name=".ListReviewAdapter"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Review"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".KategoriActivity"
+            android:exported="false"
+            android:label="@string/title_activity_kategori"
+            android:theme="@style/Theme.New_decuisine.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DeCuisineProfile"
             android:exported="false">
             <meta-data

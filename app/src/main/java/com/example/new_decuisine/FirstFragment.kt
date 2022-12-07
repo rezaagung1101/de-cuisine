@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
@@ -27,11 +28,13 @@ class FirstFragment : Fragment() {
     lateinit var rvListRecipe: RecyclerView
     lateinit var search: SearchView
     lateinit var button: Button
+
     val recipeList = ArrayList<Recipe>()
     val adapter = ListRecipeAdapter(recipeList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //image
     }
 
     override fun onCreateView(
@@ -44,6 +47,12 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //search
+        var img : ImageView = view.findViewById(R.id.profile_image)
+        img.setOnClickListener {
+            val intent = Intent(context, DeCuisineProfile::class.java)
+            context?.startActivity(intent)
+        }
         search = view.findViewById(R.id.searchView)
         search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -55,6 +64,7 @@ class FirstFragment : Fragment() {
                 return false
             }
         })
+
         recipeList.add(Recipe(R.drawable.ayam_betutu,"Spaghetti Bolognese","Kontinental","Devina Hermawan"))
         recipeList.add((Recipe(R.drawable.ayam_betutu,"Cottage Pie","Kontinental","Arnold Poernomo")))
         recipeList.add((Recipe(R.drawable.ayam_betutu,"Rendang","Nusantara","Luvita Ho")))

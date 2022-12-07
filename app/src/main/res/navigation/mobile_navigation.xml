@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_oriental"
+        android:name="com.example.new_decuisine.ui.oriental.OrientalFragment"
+        android:label="Oriental"
+        tools:layout="@layout/fragment_oriental" />
+
+    <fragment
+        android:id="@+id/nav_kontrinental"
+        android:name="com.example.new_decuisine.ui.kontinental.KontinentalFragment"
+        android:label="Kontinental"
+        tools:layout="@layout/fragment_kontinental" />
+
+    <fragment
+        android:id="@+id/nav_nusantara"
+        android:name="com.example.new_decuisine.ui.nusantara.NusantaraFragment"
+        android:label="Nusantara"
+        tools:layout="@layout/fragment_nusantara" />
+</navigation>
