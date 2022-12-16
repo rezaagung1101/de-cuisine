@@ -9,5 +9,5 @@ data class Review (
     val name: String,
     val creator: String,
     val review: String,
-    val rating: Int
+    val rating: Double
 ): Parcelable

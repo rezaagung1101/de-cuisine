@@ -30,7 +30,7 @@ class ListReviewAdapter(var reviewList: ArrayList<Review>): RecyclerView.Adapter
             kategoriReview.text = reviewList[position].category
             pembuatReview.text = reviewList[position].creator
             isiReview.text = reviewList[position].review
-            ratingReview.numStars = reviewList[position].rating
+            ratingReview.rating = reviewList[position].rating.toFloat()
         }
     }
 

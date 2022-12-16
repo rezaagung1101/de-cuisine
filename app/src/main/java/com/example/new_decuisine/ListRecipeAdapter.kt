@@ -37,14 +37,18 @@ class ListRecipeAdapter(var recipeList: ArrayList<Recipe>): RecyclerView.Adapter
             var kategoriResep = findViewById<TextView>(R.id.recipe_cat)
             var pembuatResep = findViewById<TextView>(R.id.recipe_creator)
             var button = findViewById<Button>(R.id.button)
-            photo.setImageResource(recipeList[position].photo)
             photo.setOnClickListener {
                 Toast.makeText(context,recipeList[position].name, Toast.LENGTH_SHORT).show()
             }
             button.setOnClickListener {
                 val intent = Intent(context, DetailActivity::class.java)
+                intent.putExtra(DetailActivity.NAME,namaResep.text.toString())
+                intent.putExtra(DetailActivity.CREATOR,pembuatResep.text.toString())
+                intent.putExtra(DetailActivity.BAHAN,recipeList[position].ingridients)
+                intent.putExtra(DetailActivity.PHOTO,recipeList[position].photo)
                 context.startActivity(intent)
             }
+            photo.setImageResource(recipeList[position].photo)
             namaResep.text = recipeList[position].name
             kategoriResep.text = recipeList[position].category
             pembuatResep.text = recipeList[position].creator

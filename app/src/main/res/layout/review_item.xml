@@ -56,15 +56,18 @@
 
     <RatingBar
         android:id="@+id/review_rating"
-        android:layout_width="234dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:isIndicator="true"
         app:layout_constraintBottom_toBottomOf="@+id/review_creator"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/review_name"
         app:layout_constraintTop_toTopOf="@+id/review_cat" />
 
     <TextView
         android:id="@+id/review_review"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="sebuah  review yang lumayan panjang lorem ipsum dolor sil amet tahu bulat digoreng di mobil"

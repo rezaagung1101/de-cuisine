@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 
 class DetailActivity : AppCompatActivity() {
 
@@ -27,17 +28,20 @@ class DetailActivity : AppCompatActivity() {
         val photo: ImageView = findViewById(R.id.ivFotoResep)
         val btn: Button = findViewById(R.id.btnKembali)
 
-        btn.setOnClickListener {
-            this.finish()
-        }
-
         namaResepCol.text = intent.getStringExtra(NAME)
         creatorCol.text = intent.getStringExtra(CREATOR)
         bahanCol.text = intent.getStringExtra(BAHAN)
         photo.setImageResource(intent.getIntExtra(PHOTO,R.drawable.ayam_betutu))
 
-
+        btn.setOnClickListener {
+            this.finish()
+        }
 
 
     }
+    private fun setCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment, fragment)
+            commit()
+        }
 }
